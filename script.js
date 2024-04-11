@@ -127,8 +127,10 @@ function setSuccess(input) {
     }
 
     const taxAmount = taxableIncome * taxRate;
-    console.log(taxAmount);
+    const overallIncome = totalIncome - taxAmount;
+    // console.log(taxAmount);
     showModal();
+    document.getElementById('overAllIncome').innerHTML = `₹ ${overallIncome.toFixed(2)}`; 
     document.getElementById('taxableIncome').textContent = `₹ ${taxableIncome.toFixed(2)}`;
     document.getElementById('taxAmount').textContent = `₹ ${taxAmount.toFixed(2)}`;
 }
