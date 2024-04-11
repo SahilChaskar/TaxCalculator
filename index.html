@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Calculator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- <link  rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/> -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <form id="mainForm" novalidate>
+            <h2>Tax Calculator</h2>
+            <!-- Gross Annual Income section -->
+            <div class="form-control">
+                <label for="grossIncome"><a href="#" data-tip="Gross Annual Income is your Total salary in a year before any deductions">Gross Annual Income</a></label>
+                <input type="text" id="grossIncome" placeholder="Enter Gross Annual Income" autocomplete="off">
+                <i class="icon"></i>     
+            </div>
+            
+            <!-- Extra Income Section -->
+            <div class="form-control">
+                <label for="extraIncome"><a href="#" data-tip="Extra Income is the Income generated apart from your salary">Extra Income</a></label>
+                <input type="text" id="extraIncome" placeholder="Enter Extra Income" autocomplete="off">
+                <i class="icon"></i>     
+            </div>
+
+            <!-- Deductions Section -->
+            <div class="form-control">
+                <label for="deductions"><a href="#" data-tip="Deductions are expenses that are subtracted from your income before calculating tax">Deductions</a></label>
+                <input type="text" id="deductions" placeholder="Enter Deductions" autocomplete="off">
+                <i class="icon"></i>     
+            </div>
+
+            <!-- Tax Year Selection -->
+            <div class="form-control">
+                <label for="age">Age</label>
+                <select class="form-control" id="age" required>
+                  <option value="">Select Age Group</option>
+                  <option value="less40">&lt; 40</option>
+                  <option value="less60">&GreaterEqual; 40 & &lt; 60</option>
+                  <option value="great60">&GreaterEqual; 60</option>
+                </select>
+                <i class="icon"></i>
+                <div class="invalid-feedback"></div>
+            </div>
+        
+            <button type="submit">Submit</button>
+        
+        </form>
+    </div>
+
+    <div id="TaxModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">
+                &times;
+            </span>
+                <h3>Tax Calculation Result</h3>
+                <p>Your taxable income is: <span id="taxableIncome"></span></p>
+                <p>Your tax amount is: <span id="taxAmount"></span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
