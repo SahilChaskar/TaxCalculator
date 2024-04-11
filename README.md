@@ -5,8 +5,8 @@ This is a simple website that allows users to calculate their tax based on their
 ## Screenshots
 
 ![Homepage](Home.png?raw=true "Homepage")
-![Modal](Modal.png?raw=true "Modal")
-![Error](Error.png?raw=true "Error")
+![Modal](modal.png?raw=true "Modal")
+![Error](error.png?raw=true "Error")
 
 ## Features
 
